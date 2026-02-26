@@ -3,9 +3,9 @@ package com.mx.ux.Unidad1.elementos.robot;
 public class Motor {
 
     private String tipoPotencia;
-    private Float cantidadFuerza;
+    private float cantidadFuerza;
 
-    public void asignarFuncion (String Potencia, Float Fuerza){
+    public void asignarFuncion (String Potencia, float Fuerza){
         tipoPotencia = Potencia;
         cantidadFuerza = Fuerza;
 

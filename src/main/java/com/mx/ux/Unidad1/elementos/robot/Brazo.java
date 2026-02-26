@@ -4,9 +4,9 @@ public class Brazo {
 
     // Atributos
     private String tipoMovimiento;
-    private Float Velocidad;
+    private float Velocidad;
 
-    public void asignarMovimiento(String movimiento,Float vel){
+    public void asignarMovimiento(String movimiento,float vel){
         tipoMovimiento = movimiento;
         Velocidad = vel;
 

@@ -3,9 +3,9 @@ package com.mx.ux.Unidad1.elementos.robot;
 public class Bateria {
 
     private String nivelBateria;
-    private Float porcentajeBateria;
+    private float porcentajeBateria;
 
-    public void chequeoEstado(String nivel, Float porcentaje){
+    public void chequeoEstado(String nivel, float porcentaje){
         nivelBateria = nivel;
         porcentajeBateria = porcentaje;
 
