@@ -7,8 +7,9 @@ public class Reconocimiento extends ModeloIa{
     }
 
     public void procesarEntrada(String entrada){
-        System.out.println("Cargando datos ....");
-        System.out.println("");
+        System.out.println("Cargando datos.....");
+        System.out.println("Extrayendo datos.....");
+        System.out.println("Comparando vector.....");
     }
 
 

@@ -1,11 +1,9 @@
 package com.mx.ux.Unidad1.adstraccion;
 
-public class ModeloIa {
+public abstract class ModeloIa {
     protected  String nombre;
 
-    public ModeloIa(String nombre) {
-        this.nombre = nombre;
-    }
+    public ModeloIa(String nombre) { this.nombre = nombre; }
 
     public abstract void procesarEntrada(String entrada);
 }
