@@ -5,7 +5,16 @@ public class Main {
         // TODO: Instanciar un objeto de tipo AnalizadorSentimientos usando la referencia de la clase abstracta.
         // Ejemplo: MotorIA miModelo = new ...
 
+        MotorIA agente = new AnalizadorSentimientos();
+        agente.analizar("Analizando Sentimientos");
+
         System.out.println("Sistema de IA Iniciado...");
+
+        agente.analizar("Hoy es un día muy bueno y estoy feliz");
+        agente.analizar("El servicio fue terrible");
+        agente.analizar("Me corrieron de la chamba y estoy enojado");
+        agente.analizar("Me regañaron y estoy triste");
+        agente.analizar("Me llegó el recibo de luz y estoy espantado");
 
         // TODO: Llamar al método analizar con los siguientes textos:
         // 1. "Hoy es un día muy bueno y estoy feliz"
@@ -17,4 +26,4 @@ public class Main {
         */
     }
 }
-}
+

@@ -2,8 +2,8 @@ package com.mx.ux.Unidad1.sistemas_nlp;
 
 import com.mx.ux.Unidad1.adstraccion.ModeloIa;
 
-abstract class MotorIA {
-    private String nombreModelo;
+public abstract class MotorIA {
+    protected String nombreModelo;
     private double precision;
 
     public MotorIA(String nombre, double precision){
@@ -20,5 +20,5 @@ abstract class MotorIA {
         return precision;
     }
 
-    public abstract void analizar(String analizando);
+    public abstract void analizar(String texto);
 }
