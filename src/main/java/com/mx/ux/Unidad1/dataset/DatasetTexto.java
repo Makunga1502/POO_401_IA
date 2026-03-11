@@ -1,10 +1,10 @@
 package com.mx.ux.Unidad1.dataset;
 
-public class DatasetImagen extends DataSet {
+public class DatasetTexto extends DataSet {
 
     @Override
     public void cargarDatos(){
         super.cargarDatos();
-        System.out.println("Procesando imagenes");
+        System.out.println("Procesando texto");
     }
 }
