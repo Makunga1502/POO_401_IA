@@ -24,6 +24,9 @@ public class Main {
         percepcionHub.add(obj6);
         obj1 = new SensorLidar("1.7", 1.80);
         percepcionHub.add(obj1);
+        obj5 = new SensorUltrasonido("1.5", 1.70);
+        obj5.setModelo("1.8");
+        percepcionHub.add(obj5);
         System.out.println("Central de datos");
 
         for (SensorIA sensor : percepcionHub) {
