@@ -3,9 +3,13 @@ package com.mx.ux.Unidad2.SensorHeterogeneo;
 public class SensorLidar extends SensorIA{
 
 
+    public SensorLidar(String modelo, double consumoEnergia) {
+        super(modelo, consumoEnergia);
+    }
+
     @Override
     public void leerDatos() {
-        System.out.println("Escaneando entorno 360°... Generando nube de puntos láser.");
+        System.out.println("Escaneando entorno 360°... Generando nube de puntos láser." + "Modelo" + " " + getModelo() + " " + "Consumo de energia" + " " + getConsumoEnergia() );
         System.out.println();
     }
 }
