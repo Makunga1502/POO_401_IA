@@ -15,13 +15,15 @@ public class Main {
         SensorUltrasonido obj5 = new SensorUltrasonido("1.5", 1.70);
         SensorUltrasonido obj6 = new SensorUltrasonido("1.6", 1.75);
 
+
         percepcionHub.add(obj1);
         percepcionHub.add(obj2);
         percepcionHub.add(obj3);
         percepcionHub.add(obj4);
         percepcionHub.add(obj5);
         percepcionHub.add(obj6);
-
+        obj1 = new SensorLidar("1.7", 1.80);
+        percepcionHub.add(obj1);
         System.out.println("Central de datos");
 
         for (SensorIA sensor : percepcionHub) {
