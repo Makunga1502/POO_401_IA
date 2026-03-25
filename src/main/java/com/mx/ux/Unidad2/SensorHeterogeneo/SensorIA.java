@@ -4,6 +4,7 @@ public abstract class SensorIA {
     protected String modelo;
     protected double consumoEnergia;
 
+
     public String getModelo() {
         return modelo;
     }

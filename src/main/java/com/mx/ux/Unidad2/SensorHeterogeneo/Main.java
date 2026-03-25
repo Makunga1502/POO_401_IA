@@ -3,6 +3,7 @@ package com.mx.ux.Unidad2.SensorHeterogeneo;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Main {
     public static void main(String[] args) {
         List<SensorIA> percepcionHub = new ArrayList<>();
