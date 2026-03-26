@@ -11,6 +11,10 @@ public abstract class ProcesadorNLP {
         return textoCrudo;
     }
 
+    public String setTextoCrudo(String textoLimpio){
+        return textoCrudo;
+    }
+
 
     public void cargarTexto(){};
     public abstract List <String> tokenizar();
