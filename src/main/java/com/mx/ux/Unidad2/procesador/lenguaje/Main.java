@@ -6,22 +6,25 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        String texto = "El modelo es excelente, es un modelo muy bueno y genial";
+        String texto = "El modelo es excelente, es un modelo muy bueno y genial.";
 
-        List<ProcesadorNLP> procesador = new ArrayList<>();
+        List<ProcesadorNLP> procesadores = new ArrayList<>();
 
-        procesador.add(new ProcesadorSimple());
-        procesador.add(new ProcesadorAnalisisSentimiento());
+        procesadores.add(new ProcesadorSimple());
+        procesadores.add(new ProcesadorAnalisisSentimiento());
 
-        for (ProcesadorNLP p: procesador){
-            System.out.println("\n=== Procesador" + p.getClass().getSimpleName() + "===");
+        for (ProcesadorNLP p: procesadores){
+            System.out.println("\n=== Procesador" + p.getClass().getSimpleName() + " ===");
             p.cargarTexto(texto);
             p.limpiarTexto();
             List<String> tokens = p.tokenizar();
-            Object resultado = p.transformarModelo();
+            Object resultado = p.transformarParaModelo();
 
-            System.out.println("Tokens" + tokens);
-            System.out.println("Resultados" + resultado);
+            System.out.println("Tokens: " + tokens);
+            System.out.println("Resultados: " + resultado);
+
+
         }
     }
+
 }

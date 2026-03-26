@@ -5,21 +5,24 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ProcesadorSimple extends ProcesadorNLP{
+    private List<String> tokens = new ArrayList<>();
 
     @Override
     public List<String> tokenizar() {
-        tokens = new ArrayList<>(Arrays.asList(getTextoCrudo().split("\\s+")));
+        tokens = Arrays.asList(textoCrudo.split("\\s+"));
         return tokens;
     }
 
     @Override
     public void limpiarTexto() {
-        String textoLimpio = getTextoCrudo().replace(".", "" ).replace(",", "");
-        setTextoCrudo(textoLimpio);
+        textoCrudo = textoCrudo.toLowerCase()
+                .replace(".", "")
+                .replace(",", "");
+
     }
 
     @Override
-    public Object transformarModelo() {
+    public Object transformarParaModelo() {
         return tokens.size();
     }
 }

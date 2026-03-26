@@ -3,29 +3,42 @@ package com.mx.ux.Unidad2.procesador.lenguaje;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class ProcesadorAnalisisSentimiento extends ProcesadorNLP{
-    private static final List<String> STOP_WORDS = Arrays.asList("el", "la", "un");
+public class ProcesadorAnalisisSentimiento extends ProcesadorNLP {
+    private List<String> tokens = new ArrayList<>();
+    private Set<String> stopWords = new HashSet<>(Arrays.asList(
+            "el", "la", "los", "las", "un", "una", "y", "de"
+    ));
+    private Set<String> palabrasPositivas = new HashSet<>(Arrays.asList(
+            "bueno", "excelente", "feliz", "genial", "increible"
+    ));
 
     @Override
     public List<String> tokenizar() {
-        tokens = new ArrayList<>(Arrays.asList(getTextoCrudo().split("\\s+")));
+        tokens = Arrays.asList(textoCrudo.toLowerCase().split("\\s+"));
         return tokens;
     }
 
     @Override
     public void limpiarTexto() {
-        tokens = tokens.stream().filter(p -> !STOP_WORDS.contains(p.toLowerCase())).collect(Collectors.toList());
-
+        List<String> filtradas = new ArrayList<>();
+        for (String palabra:tokens) {
+            palabra = palabra.replace(".", "").replace(",", "");
+            if (!stopWords.contains(palabra)) {
+                filtradas.add(palabra);
+            }
+        }
+        tokens = filtradas;
     }
 
     @Override
-    public Object transformarModelo() {
+    public Object transformarParaModelo() {
         Map<String, Integer> frecuencia = new HashMap<>();
-        for (String palabra: tokens){
-            if (tokens.contains(palabra.toLowerCase())){
-                frecuencia.merge(palabra, 1, Integer::sum);
+        for (String palabra: tokens) {
+            if (palabrasPositivas.contains(palabra)) {
+                frecuencia.put(palabra, frecuencia.getOrDefault(palabra, 0) + 1);
             }
         }
-        return frecuencia.toString();
+        return frecuencia;
     }
 }
+
