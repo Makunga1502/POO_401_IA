@@ -14,7 +14,7 @@ public class ProcesadorSimple extends ProcesadorNLP{
 
     @Override
     public void limpiarTexto() {
-        String textoLimpio = getTextoCrudo().replace(" . ", " " ).replace(',', ' ');
+        String textoLimpio = getTextoCrudo().replace(".", "" ).replace(",", "");
         setTextoCrudo(textoLimpio);
     }
 

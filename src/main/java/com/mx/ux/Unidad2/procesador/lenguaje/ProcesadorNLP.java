@@ -16,7 +16,11 @@ public abstract class ProcesadorNLP {
     }
 
 
-    public void cargarTexto(){};
+
+
+    public void cargarTexto(String texto){
+        this.textoCrudo = texto;
+    };
     public abstract List <String> tokenizar();
     public abstract void limpiarTexto();
     public abstract Object transformarModelo();
