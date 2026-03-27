@@ -4,25 +4,23 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ProcesadorSimple extends ProcesadorNLP{
-    private List<String> tokens = new ArrayList<>();
+public class ProcesadorSimple extends ProcesadorNLP {
 
     @Override
     public List<String> tokenizar() {
-        tokens = Arrays.asList(textoCrudo.split("\\s+"));
+        tokens = new ArrayList<>(Arrays.asList(getTextoCrudo().split("\\s+")));
         return tokens;
     }
 
     @Override
     public void limpiarTexto() {
-        textoCrudo = textoCrudo.toLowerCase()
-                .replace(".", "")
-                .replace(",", "");
-
+        String textoLimpio = getTextoCrudo().replace(".", " ").replace(",", " ");
+        setTextoCrudo(textoLimpio);
     }
 
     @Override
     public Object transformarParaModelo() {
         return tokens.size();
     }
+
 }

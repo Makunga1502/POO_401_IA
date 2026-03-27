@@ -3,10 +3,12 @@ package com.mx.ux.Unidad2.procesador.lenguaje;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Main {
+
     public static void main(String[] args) {
 
-        String texto = "El modelo es excelente, es un modelo muy bueno y genial.";
+        String texto = "El modelo es excelente, es un modelo muy bueno y genial, también, es. Impresionante.";
 
         List<ProcesadorNLP> procesadores = new ArrayList<>();
 
@@ -16,15 +18,12 @@ public class Main {
         for (ProcesadorNLP p: procesadores){
             System.out.println("\n=== Procesador" + p.getClass().getSimpleName() + " ===");
             p.cargarTexto(texto);
-            p.limpiarTexto();
-            List<String> tokens = p.tokenizar();
-            Object resultado = p.transformarParaModelo();
+            p.procesarTexto();
 
-            System.out.println("Tokens: " + tokens);
+            Object resultado = p.transformarParaModelo();
             System.out.println("Resultados: " + resultado);
 
 
         }
     }
-
 }
