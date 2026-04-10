@@ -8,12 +8,19 @@ public class Main {
 
         List<FiguraGeometrica> figuras = new ArrayList<>();
 
-        figuras.add(new Circulo("Circulo"));
-        figuras.add(new Rectangulo("Rectangulo"));
+        figuras.add(new Circulo(12));
+        figuras.add(new Rectangulo(15, 4));
 
         for (FiguraGeometrica f: figuras){
             f.mostrarNombre();
-            f.calcularArea();
+            System.out.println(f.calcularArea());
         }
+        System.out.println("Implementación remix");
+
+        RectanguloRemix rectanguloRemix = new RectanguloRemix("Rectangulo Remix");
+        rectanguloRemix.setBase(20);
+        rectanguloRemix.setAltura(13);
+        rectanguloRemix.mostrarNombre();
+        System.out.println("El area es = " + rectanguloRemix.calcularArea());
     }
 }
