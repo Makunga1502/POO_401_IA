@@ -1,4 +1,4 @@
-package com.mx.ux.Unidad2.modeladoRestaurante;
+package com.mx.ux.Unidad2.practicas.paradigmaoo.modeladoRestaurante;
 
 public class Main extends Restaurante{
     public static void main(String[] args) {Restaurante r1 = new Restaurante();

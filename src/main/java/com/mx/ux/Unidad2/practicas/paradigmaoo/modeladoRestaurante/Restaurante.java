@@ -1,4 +1,4 @@
-package com.mx.ux.Unidad2.modeladoRestaurante;
+package com.mx.ux.Unidad2.practicas.paradigmaoo.modeladoRestaurante;
 
 class Restaurante {
     String nombre;
