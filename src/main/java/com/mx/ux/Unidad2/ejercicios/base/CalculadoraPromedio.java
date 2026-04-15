@@ -11,6 +11,7 @@ public class CalculadoraPromedio {
 
 
 
+
         try {
             System.out.println("Ingresa la nota1: ");
             nota1 = sc.nextDouble();
