@@ -13,11 +13,11 @@ public class NullPointerException {
 
     public static void main(String[] args) {
         NullPointerException cs = null;
-        cs.getNumero(0);
+        //cs.getNumero(0);
 
         try {
-            NullPointerException cs = null;
-            System.out.printf(cs.getNumero());
+           // NullPointerException cs = null;
+           // System.out.printf(cs.getNumero());
         } catch (Exception e){
             System.out.println("error = " + e.getMessage());
         }
