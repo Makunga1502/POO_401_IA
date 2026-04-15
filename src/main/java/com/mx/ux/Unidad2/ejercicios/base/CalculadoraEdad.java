@@ -1,28 +1,31 @@
 package com.mx.ux.Unidad2.ejercicios.base;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class CalculadoraEdad {
     public static void main(String[] args) {
 
-        int anoActual = 2026;
-        Scanner sc = new Scanner(System.in);
+        int anioActual = 2026;
+        Scanner scanner = new Scanner(System.in);
 
-        try{
-            System.out.println("Ingresa tu año de nacimiento: ");
-            int anoNacimiento = sc.nextInt();
-        }catch (InputMismatchException e){
-            System.out.println("Error al ingresar el tipo de dato"+ e.getMessage());
-            System.out.println("Error al ingresar el tipo de dato"+ e.getCause());
-            System.out.println("Error al ingresar el tipo de dato"+ e.getLocalizedMessage());
-        }finally {
-            sc.close();
+        try {
+            System.out.print("Por favor, ingrese su año de nacimiento: ");
+
+
+            int anioNacimiento = scanner.nextInt();
+
+
+            int edad = anioActual - anioNacimiento;
+            System.out.println("Según el año actual (" + anioActual + "), tu edad aproximada es: " + edad + " años.");
+
+        } catch (InputMismatchException e) { // [cite: 14, 15]
+
+            System.out.println("Error: El dato ingresado no es válido. Por favor, asegúrese de ingresar un número entero.");
+
+        } finally {
+            scanner.close();
+            System.out.println("Recursos liberados correctamente.");
         }
-
-
-
-
-
     }
 }
