@@ -44,6 +44,7 @@ public class AnalizadorDeNumeros {
             String entrada = sc.nextLine();
             esIncorrecto = !entrada.equals(Pass);
 
+
         } while (esIncorrecto);
         System.out.println("Contraseña Aceptada");
 
