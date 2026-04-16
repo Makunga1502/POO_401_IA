@@ -2,6 +2,7 @@ package com.mx.ux.Unidad2.herenciaMasSobreEscritura;
 
 public class Rectangulo extends FiguraGeometrica{
 
+
     double base, altura;
 
     public Rectangulo(double base, double altura) {

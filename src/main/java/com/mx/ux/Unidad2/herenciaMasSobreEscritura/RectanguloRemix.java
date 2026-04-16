@@ -1,6 +1,7 @@
 package com.mx.ux.Unidad2.herenciaMasSobreEscritura;
 
 public class RectanguloRemix extends FiguraGeometrica{
+
     private double base, altura;
 
 

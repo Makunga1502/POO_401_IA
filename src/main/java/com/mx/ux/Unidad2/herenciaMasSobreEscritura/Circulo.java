@@ -2,6 +2,7 @@ package com.mx.ux.Unidad2.herenciaMasSobreEscritura;
 
 public class Circulo extends FiguraGeometrica{
 
+
     double radio;
 
     public Circulo(double radio) {

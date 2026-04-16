@@ -1,6 +1,7 @@
 package com.mx.ux.Unidad2.herenciaMasSobreEscritura;
 
 abstract class FiguraGeometrica {
+
     protected String nombre;
 
     public FiguraGeometrica(String nombre){
